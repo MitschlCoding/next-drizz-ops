@@ -1,7 +1,6 @@
-version: '3.8'
 services:
   app:
-    image: ghcr.io/MitschlCoding/next-drizz:latest
+    image: "ghcr.io/mitschlcoding/next-drizz:latest"
     container_name: nextjs_production_app
     ports:
       - "3000:3000"
