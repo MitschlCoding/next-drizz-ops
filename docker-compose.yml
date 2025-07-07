@@ -22,7 +22,7 @@ services:
       - "traefik.http.routers.app-secure.entrypoints=https"
       - "traefik.http.routers.app-secure.rule=Host(`app.mitschl.de`)"
       - "traefik.http.routers.app-secure.tls=true"
-      - "traefik.http.routers.app-secure.tls.certresolver=http"
+      - "traefik.http.routers.app-secure.tls.certresolver=myresolver"
       
       # --- Point Traefik to the right port and service ---
       - "traefik.http.services.app-service.loadbalancer.server.port=3000"
