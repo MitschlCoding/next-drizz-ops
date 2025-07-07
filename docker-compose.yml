@@ -12,3 +12,9 @@ services:
      - traefik.enable=true
      - traefik.http.routers.apache.rule=Host(`app.mitschl.de`)
      - traefik.http.routers.apache.entrypoints=web
+    networks:
+      - "proxy"
+
+networks:
+  proxy:
+    external: true
