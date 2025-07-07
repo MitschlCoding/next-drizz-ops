@@ -8,3 +8,7 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
+    labels:
+     - traefik.enable=true
+     - traefik.http.routers.apache.rule=Host(`app.example.com`)
+     - traefik.http.routers.apache.entrypoints=web
